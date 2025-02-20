@@ -1,0 +1,10 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    V_DOLAR NUMBER := 45;
+    V_CONV  NUMBER := 5.75;
+    V_REAL  NUMBER;
+BEGIN
+    V_REAL := V_DOLAR * V_CONV;
+    dbms_output.put_line('O VALOR EM REAL É: ' || V_REAL);
+END;

@@ -1,0 +1,16 @@
+SET SERVEROUTPUT ON;
+
+DECLARE
+    V_TOTAL NUMBER := 55000;
+    JUROS NUMBER := 0.03;
+    PARCELA NUMBER := V_TOTAL/10;
+    P_JUROS NUMBER;
+    V_FINAL NUMBER;
+
+BEGIN
+    P_JUROS := PARCELA + (PARCELA * JUROS); 
+    V_FINAL := P_JUROS * 10;
+    dbms_output.put_line('O VALOR DA PARCELA SEM JUROS É: ' || PARCELA);
+    dbms_output.put_line('O VALOR DA PARCELA COM JUROS É: ' || P_JUROS);
+    dbms_output.put_line('O VALOR TOTAL COM JUROS É: ' || V_FINAL);
+END;
